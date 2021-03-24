@@ -1,3 +1,7 @@
+"""
+Code init de la base de données
+"""
+
 import os
 import sqlite3
 
@@ -10,4 +14,5 @@ with sqlite3.connect(DB_FILENAME, uri=True) as conn:
         with open(SCHEMA_FILENAME, 'rt') as f:
             schema = f.read()
             conn.executescript(schema)
+
 
